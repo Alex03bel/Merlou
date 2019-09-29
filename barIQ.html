@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kafs</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/bootstrap.js"></script>
+    <script src="js/lexa.js"></script>
+    <link rel="stylesheet" href="css/aler.css">
+    <script type="text/javascript">
+        function buttonClick(button) {
+            alert("Вы нажали на кнопку. Кнопка имеет имя " + button.name +", также value равно " + button.value +".")
+        }
+        var counter = 0
+        function OnMousecounter (element) {
+            counter++;
+            element.innerHTML = "На этот текст было наведено  " + counter +" раз";
+        }
+    </script>
+</head>
+<body >
+<input type="button" name="b" value="Click me"  onclick="buttonClick(this)" />
+
+<span onmousemove="OnMousecounter (this)"> На этот текст было наведено 0 раз</span>
+</body>
+</html>
